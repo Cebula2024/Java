@@ -1,7 +1,43 @@
 <html>
  <body>
  <textarea cols="90" rows="24">
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>Użycie funkcji</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+        var a = parseFloat(prompt("a=",""));
+        var b = parseFloat(prompt("b=",""));
 
+        function suma_bal(a, b) {
+            return a + b;
+        }
+        function odejmowanie_bal(a, b) {
+            return a - b;
+        }
+        function mnozenie_bal(a, b) {
+            return a * b;
+        }
+        function od_kwadratu_bal(a, b) {
+            return (a*a) + " oraz " + (b*b);
+        }
+        function reszta_z_dzielenia_a_przez_b_bal(a, b) {
+            return a % b;
+        }
+
+        document.write("suma=" + suma_bal(a, b) + "<br>");
+        document.write("odejmowanie=" + odejmowanie_bal(a, b) + "<br>");
+        document.write("mnożenie=" + mnozenie_bal(a, b) + "<br>");
+        document.write("do kwadratu=" + od_kwadratu_bal(a, b) + "<br>");
+        document.write("reszta z dzielenia a przez b=" + reszta_z_dzielenia_a_przez_b_bal(a, b) + "<br>");
+    </script>
+</div>
+</body>
+</html>
  </textarea>
  </body>
 </html>
