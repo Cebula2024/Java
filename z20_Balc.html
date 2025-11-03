@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zad20_Balc</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .inputs label { display: block; margin-top: 10px; }
+        .result { margin-top: 20px; font-size: 18px; }
+        button { margin-top: 20px; }
+        .btns { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <form id="triangleForm" onsubmit="obliczBoki(); return false;">
+        <div class="inputs">
+            <label>Punkt A:
+                x: <input type="number" step="any" id="xa_balc" required>
+                y: <input type="number" step="any" id="ya_balc" required>
+            </label>
+            <label>Punkt B:
+                x: <input type="number" step="any" id="xb_balc" required>
+                y: <input type="number" step="any" id="yb_balc" required>
+            </label>
+            <label>Punkt C:
+                x: <input type="number" step="any" id="xc_balc" required>
+                y: <input type="number" step="any" id="yc_balc" required>
+            </label>
+        </div>
+        <button type="submit">Oblicz długości boków</button>
+    </form>
+    <div class="result" id="wyniki"></div>
 
+    <script>
+        function AB_balc(xa_balc, ya_balc, xb_balc, yb_balc) {
+            return Math.sqrt(Math.pow(xb_balc - xa_balc, 2) + Math.pow(yb_balc - ya_balc, 2));
+        }
+        function BC_balc(xb_balc, yb_balc, xc_balc, yc_balc) {
+            return Math.sqrt(Math.pow(xc_balc - xb_balc, 2) + Math.pow(yc_balc - yb_balc, 2));
+        }
+        function AC_balc(xa_balc, ya_balc, xc_balc, yc_balc) {
+            return Math.sqrt(Math.pow(xc_balc - xa_balc, 2) + Math.pow(yc_balc - ya_balc, 2));
+        }
+
+        function obliczBoki() {
+            var xa_balc = parseFloat(document.getElementById('xa_balc').value);
+            var ya_balc = parseFloat(document.getElementById('ya_balc').value);
+            var xb_balc = parseFloat(document.getElementById('xb_balc').value);
+            var yb_balc = parseFloat(document.getElementById('yb_balc').value);
+            var xc_balc = parseFloat(document.getElementById('xc_balc').value);
+            var yc_balc = parseFloat(document.getElementById('yc_balc').value);
+
+            var ab = AB_kry(xa_balc, ya_balc, xb_balc, yb_balc);
+            var bc = BC_kry(xb_balc, yb_balc, xc_balc, yc_balc);
+            var ac = AC_kry(xa_balc, ya_balc, xc_balc, yc_balc);
+
+            document.getElementById('wyniki').innerHTML = 
+                "Długość boku AB: " + ab.toFixed(4) + "<br>" +
+                "Długość boku BC: " + bc.toFixed(4) + "<br>" +
+                "Długość boku AC: " + ac.toFixed(4);
+        }
+    </script>
+</body>
+</html>
