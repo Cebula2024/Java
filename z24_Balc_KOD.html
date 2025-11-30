@@ -1,0 +1,56 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24"><!DOCTYPE html>
+ <head>
+ <title> Zad 24 </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:blue;background-color:grey;font-size:50px;">
+ <script language="JavaScript">
+ var x1_bal=parseFloat(prompt("x1=",""));
+ var x2_bal=parseFloat(prompt("x2=",""));
+
+ function y1_bal(x1) {
+ return 3 * Math.pow(x1_bal, 5/7);
+}
+
+function x1_rad(x1) {
+var st_bal=x1_bal;
+return (st_bal * Math.PI) / 180;
+}
+
+function y2_bal(x1){
+var st_bal=x1_bal;
+var rad_bal=(st_bal * Math.PI) / 180;
+return 2 * Math.cos(rad_bal) + 3 * Math.sin(rad_bal);
+}
+
+function y3_bal(x1,x2) {
+var x1_5= Math.pow(x1_bal, 5);
+var x2_4= Math.pow(x2_bal, 4);
+var x1_x2= Math.abs(x1_bal - x2_bal);
+var pierwiastek= Math.cbrt(x1_5 + 2 * x2_4);
+return pierwiastek * x1_x2;
+}
+
+var y1_wyn =y1_bal(x1_bal);
+var y2_wyn =y2_bal(x1_bal);
+var y3_wyn =y3_bal(x1_bal,x2_bal);
+var x1_radi= x1_rad(x1_bal);
+
+document.write("x1= " +x1_bal+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"); 
+document.write("x2= " +x2_bal+"<br>");
+document.write("x1(s)= " +x1_bal+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+document.write("x1(r)= " +x1_radi.toFixed(2)+"<br>");
+document.write("y1= " +y1_wyn.toFixed(2)+"<br>");
+document.write("y2= " +y2_wyn.toFixed(2)+"<br>");
+document.write("y3= " +y3_wyn.toFixed(2)+"<br>");
+
+</script>
+</div>
+</body>
+</html>
+    </textarea>
+ </body>
+</html>  
