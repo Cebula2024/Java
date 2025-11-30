@@ -1,1 +1,54 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zad 20 </title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <h1>Trójkąt - długości boków</h1>
+  <form>
+    Punkt A: x = <input type="text" id="xa_balcerzak" value="0">
+    y = <input type="text" id="ya_balcerzak" value="0"><br><br>
+    Punkt B: x = <input type="text" id="xb_balcerzak" value="0">
+    y = <input type="text" id="yb_balcerzak" value="0"><br><br>
+    Punkt C: x = <input type="text" id="xc_balcerzak" value="0">
+    y = <input type="text" id="yc_balcerzak" value="0"><br><br>
+  </form>
+  <input type="button" value="Oblicz długości boków" onclick="obliczBoki()">
+  <div style="color:blue; font-size:30px;" id="wyniki"></div>
+  <script>
+    function AB_bal(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+    function BC_bal(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+    function AC_bal(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+    function obliczBoki() {
+      var xa_balcerzak = parseFloat(document.getElementById('xa_balcerzak').value);
+      var ya_balcerzak = parseFloat(document.getElementById('ya_balcerzak').value);
+      var xb_balcerzak = parseFloat(document.getElementById('xb_balcerzak').value);
+      var yb_balcerzak = parseFloat(document.getElementById('yb_balcerzak').value);
+      var xc_balcerzak = parseFloat(document.getElementById('xc_balcerzak').value);
+      var yc_balcerzak = parseFloat(document.getElementById('yc_balcerzak').value);
 
+      var ab = AB_bal(xa_balcerzak, ya_balcerzak, xb_balcerzak, yb_balcerzak);
+      var bc = BC_bal(xb_balcerzak, yb_balcerzak, xc_balcerzak, yc_balcerzak);
+      var ac = AC_bal(xa_balcerzak, ya_balcerzak, xc_balcerzak, yc_balcerzak);
+
+      document.getElementById('wyniki').innerHTML =
+        "AB = " + ab.toFixed(2) + " <br>BC = " + bc.toFixed(2) + " <br>AC = " + ac.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>
+ </textarea>
+ </body>
+</html>
