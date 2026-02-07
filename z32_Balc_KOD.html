@@ -1,0 +1,37 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<html>
+ <head>
+ <script type="text/javascript">
+ function samochod(producent_k, kolor_k, rok_produkcji_k, liczba_siedzien_k)
+{
+this.producent=producent_k;
+this.kolor=kolor_k;
+this.rok_produkcji=rok_produkcji_k;
+this.liczba_siedzien=liczba_siedzien_k;
+}
+ samochod.prototype.wypisz_balcerzak = function () 
+ {
+ alert(this.producent + ' ' + this.kolor+ ' ' + this.rok_produkcji+ ' ' +this.liczba_siedzien);
+ };
+var samochod1 = new samochod("Ford", "srebrny", "2006", "5"); 
+var samochod2 = new samochod('Audi', 'czarny', '2015', '5');
+var samochod3 = new samochod('Toyota','biały', '2020 ', '7');
+samochod1.wypisz_balcerzak();
+samochod2.wypisz_balcerzak();
+samochod3.wypisz_balcerzak();
+ document.write("dostęp do właściwości"+"<br>");
+ document.write("samochod pierwszy"+" "+samochod1.producent+" "+samochod1.kolor+" "+samochod1.rok_produkcji+" "+samochod1.liczba_siedzien+"<p>");
+document.write("samochod drugi"+" "+samochod2.producent+" "+samochod2.kolor+" "+samochod2.rok_produkcji+" "+samochod2.liczba_siedzien+"<p>");
+document.write("samochod trzeci"+" "+samochod3.producent+" "+samochod3.kolor+" "+samochod3.rok_produkcji+" "+samochod3.liczba_siedzien+"<p>");
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe
+</body>
+</html>
+  </textarea>
+</body>
+</html>
