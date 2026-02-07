@@ -1,19 +1,19 @@
 <html>
  <head>
  <script type="text/javascript">
-var auto_Balcerzak = { 
+var samochod = { 
    Marka: 'Ford', 
    Kolor: 'srebrny', 
    Rok_Produkcji: '2014', 
-   auto_pokaz_balcerzak: function () 
+   samochod_pokaz_balcerzak: function () 
      { 
         document.write(this.Marka + ' ' + this.Rok_Produkcji) 
      } 
   } 
-auto.auto_pokaz_balcerzak();
-auto.liczba_drzwi=5;
-auto.auto_wypisz_balcerzak=function() {alert('liczba drzwi: ' + this.liczba_drzwi + 'liczba')}
-auto.auto_wypisz_balcerzak();
+samochod.samochod_pokaz_balcerzak();
+samochod.liczba_siedzeni=5;
+samochod.samochod_wypisz_balcerzak=function() {alert('liczba siedzeni: ' + this.liczba_siedzeni + 'liczba')}
+samochod.samochod_wypisz_balcerzak();
  </script>
  </head>
 <body>
@@ -25,7 +25,7 @@ Marka<br>
 Kolor<br> 
 Rok Produkcji<br> 
 metoda: auto_pokaz_balcerzak<br>
-nowe pole to liczba drzwi <br>
+nowe pole to liczba siedzeni <br>
 nowa metoda to auto_wypisz_balcerzak();<br>
 </body>
 </html>
