@@ -1,0 +1,104 @@
+<html>
+ <body>
+   <title>Balcerzak Z41_JS_KOD</title>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Balcerzak Z41_JS</title>
+    <meta charset="utf-8">
+    <style>
+        h1 { text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <h1>Proste działania - Zadanie 41</h1>
+    <h2>Autor: Balcerzak</h2>
+
+    <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+    <br><br>
+
+    <input type="button" value="DODAWANIE" onclick="suma_bal()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_bal()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_bal()">
+    <input type="button" value="DZIELENIE" onclick="iloraz_bal()">
+    <input type="button" value="TEORIA-Balcerzak" onclick="teoria_bal()">
+
+    <div id="wynik" style="margin-top:20px; font-weight: bold;"></div>
+
+    <script>
+        function suma_bal() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                var suma = parseFloat(a) + parseFloat(b);
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma.toFixed(2);
+            }
+        }
+
+        function roznica_bal() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                var roznica = parseFloat(a) - parseFloat(b);
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica.toFixed(2);
+            }
+        }
+
+        function iloczyn_bal() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                var iloczyn = parseFloat(a) * parseFloat(b);
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn.toFixed(2);
+            }
+        }
+
+        function iloraz_bal() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else if (parseFloat(b) == 0) {
+                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+            } else {
+                var iloraz = parseFloat(a) / parseFloat(b);
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz.toFixed(2);
+            }
+        }
+
+        function teoria_bal() {
+            // Styl document.write zapożyczony od kolegi, ale z Twoimi danymi
+            document.write("<font color=green size=4>Pierwsza linia teorii (Balcerzak)</font><br>");
+            document.write("<font color=red size=4>&lt;label for=\"a\"&gt; - etykieta pola a</font><br>");
+            
+            document.write("<font color=green size=4>Druga linia teorii</font><br>");
+            document.write("<font color=red size=4>parseFloat() - zamiana tekstu na liczbę</font><br>");
+            
+            document.write("<font color=green size=4>Trzecia linia teorii</font><br>");
+            document.write("<font color=red size=4>onclick=\"suma_bal()\" - wywołanie funkcji po kliknięciu</font><br>");
+            
+            document.write("<font color=green size=4>Czwarta linia teorii</font><br>");
+            document.write("<font color=red size=4>if (b == 0) - sprawdzenie dzielenia przez zero</font><br>");
+            
+            document.write("<font color=green size=4>Piąta linia teorii</font><br>");
+            document.write("<font color=red size=4>innerHTML - wpisanie wyniku do elementu div</font><br>");
+            
+            document.write("<br><input type='button' value='Powrót' onclick='window.location.reload()'>");
+        }
+    </script>
+</body>
+</html>
+<!-- Balcerzak Z41_JS -->
+   </textarea>
+ </body>
+</html>
+<!-- Balcerzak Z41_JS_KOD -->
