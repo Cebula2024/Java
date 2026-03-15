@@ -1,0 +1,20 @@
+<html>
+<body>
+  <title>Balcerzak Z39_JS</title>
+<p style="color:green;"> MENU </p>
+<p style="color:red;"> 1 = Kolor CZERWONY </p>
+<p style="color:blue;"> 2 = Kolor NIEBIESKI </p>
+</html>
+</body>
+<input type="button" name="balcerzak" value="Oblicz" onclick="fun_bal()" />
+ <script>
+ function fun_bal() {
+ var x_bal = prompt("Podaj kolor", "");
+ if(x_bal == 1 || x_bal.toLowerCase() == "czerwony") {
+document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); }
+ else if(x_bal == 2 || x_bal.toLowerCase() == "niebieski") {
+document.write('<h2 style="color:blue;"> wczytałeś kolor niebieski</h2><br />');
+}
+}
+</script>
+<!-- Balcerzak Z39_JS -->
