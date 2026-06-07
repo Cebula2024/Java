@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Balcerzak Z55_JS_KOD</title>
+<textarea cols="90" rows="24">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z55 Balcerzak</title>
+</head>
+<body>
+
+<script>
+    let pocz_bal;
+    let tekst_bal;
+    let ilosc_bal;
+
+    do {
+        pocz_bal = prompt("Podaj wielkość początkową tekstu z przedziału <20,60>:");
+        pocz_bal = parseInt(pocz_bal);
+
+        if (pocz_bal < 20 || pocz_bal > 60) {
+            alert("Liczba nie należy do przedziału <20,60>");
+        }
+    } while (pocz_bal < 20 || pocz_bal > 60);
+
+    tekst_bal = prompt("Podaj dowolny tekst:");
+    ilosc_bal = prompt("Ile razy wyświetlić tekst?");
+    ilosc_bal = parseInt(ilosc_bal);
+
+    for (let i_bal = 1; i_bal <= ilosc_bal; i_bal++) {
+        document.write(
+            "<p style='font-size:" + pocz_bal + "px; color:black;'>" 
+            + tekst_bal + "</p>"
+        );
+
+        if (pocz_bal < 100) {
+            pocz_bal = pocz_bal + 5;
+        } else {
+            pocz_bal = pocz_bal - 5;
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<!-- Balcerzak Z55_JS -->
+
+
+</textarea>
+</body>
+</html>
+<!-- Balcerzak Z55_KOD_JS -->
