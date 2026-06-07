@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z45 Balcerzak</title>
+</head>
+<body>
+
+<script>
+    let liczba_liter_nazwiska_bal = 9;
+    let ile_razy_wyswietlic_bal = (liczba_liter_nazwiska_bal % 4) + 10;
+    let wielkosc_liter_bal = (liczba_liter_nazwiska_bal % 3) + 40;
+
+    let dana_bal = prompt("Podaj liczbę:");
+    dana_bal = parseInt(dana_bal);
+
+    document.write("ilość wykonania pętli = " + ile_razy_wyswietlic_bal + "<br>");
+    document.write("wielkość liter = " + wielkosc_liter_bal + "px<br><br>");
+
+    for (let i_b = 1; i_b <= ile_razy_wyswietlic_bal; i_b++) {
+        if (i_b % 2 == 1) {
+            document.write("<span style='font-size:" + wielkosc_liter_bal + "px;'>Balcerzak</span><br>");
+        } else {
+            document.write("<span style='font-size:" + wielkosc_liter_bal + "px;'>Filip</span><br>");
+        }
+    }
+</script>
+
+</body>
+</html>
+<!-- Balcerzak Z45_JS -->
+  </textarea>
+</body>
+</html>
+<!-- Balcerzak Z45_KOD_JS -->
