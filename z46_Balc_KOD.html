@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea cols="90" rows="24">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z46 Balcerzak</title>
+</head>
+<body>
+
+<div style="color:red; font-size:50px;">
+<script>
+    let h_bal;
+    let a_bal;
+
+    do {
+        h_bal = prompt("Podaj wysokość trójkąta:");
+        h_bal = parseFloat(h_bal);
+    } while (h_bal <= 0);
+
+    do {
+        a_bal = prompt("Podaj podstawę trójkąta:");
+        a_bal = parseFloat(a_bal);
+    } while (a_bal <= 0);
+
+    let pole_bal = a_bal * h_bal / 2;
+
+    document.write("Pole = " + pole_bal.toFixed(2) + " cm^2");
+</script>
+</div>
+
+</body>
+</html>
+<!-- Balcerzak Z46_JS -->
+
+</textarea>
+</body>
+</html>
+<!-- Balcerzak Z46_KOD_JS -->
