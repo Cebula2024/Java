@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea cols="90" rows="24">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z53 Balcerzak</title>
+</head>
+<body>
+
+<script>
+    let a_bal = prompt("Podaj wysokość prostokąta:");
+    let b_bal = prompt("Podaj szerokość prostokąta:");
+
+    a_bal = parseInt(a_bal);
+    b_bal = parseInt(b_bal);
+
+    let wiersz_bal = "";
+
+    for (let i_bal = 1; i_bal <= b_bal; i_bal++) {
+        wiersz_bal = wiersz_bal + "*";
+    }
+
+    document.write(wiersz_bal + "<br>");
+
+    for (let i_bal = 1; i_bal <= a_bal - 2; i_bal++) {
+        document.write("*");
+
+        for (let j_bal = 1; j_bal <= b_bal - 2; j_bal++) {
+            document.write("&nbsp;&nbsp;");
+        }
+
+        document.write("*<br>");
+    }
+
+    document.write(wiersz_bal + "<br>");
+</script>
+
+</body>
+</html>
+
+<!-- Balcerzak Z53_JS -->
+
+
+</textarea>
+</body>
+</html>
+<!-- Balcerzak Z53_KOD_JS -->
