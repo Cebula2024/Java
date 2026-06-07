@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Balcerzak Z59_JS_KOD</title>
+<textarea cols="90" rows="24">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z59 Balcerzak</title>
+</head>
+<body>
+
+<script>
+    let r_bal = prompt("Podaj promień koła R:");
+    r_bal = parseInt(r_bal);
+
+    let n_bal = 0;
+
+    document.write("Punkty kratowe należące do koła K(0," + r_bal + "):<br><br>");
+
+    for (let x_bal = -r_bal; x_bal <= r_bal; x_bal++) {
+        for (let y_bal = -r_bal; y_bal <= r_bal; y_bal++) {
+
+            if (x_bal * x_bal + y_bal * y_bal <= r_bal * r_bal) {
+                document.write("(" + x_bal + ", " + y_bal + ")<br>");
+                n_bal++;
+            }
+
+        }
+    }
+
+    document.write("<br>Liczba punktów kratowych w kole wynosi: " + n_bal);
+</script>
+
+</body>
+</html>
+
+<!-- Balcerzak Z59_JS -->
+
+</textarea>
+</body>
+</html>
+<!-- Balcerzak Z59_KOD_JS -->
