@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z58 Balcerzak</title>
+</head>
+<body>
+
+<script>
+    let liczba1_bal = prompt("Podaj pierwszą liczbę:");
+    let liczba2_bal = prompt("Podaj drugą liczbę:");
+
+    liczba1_bal = parseInt(liczba1_bal);
+    liczba2_bal = parseInt(liczba2_bal);
+
+    if (liczba1_bal == liczba2_bal) {
+        confirm("Liczby są równe");
+    } else if (liczba1_bal < liczba2_bal) {
+        for (let i_bal = liczba1_bal; i_bal <= liczba2_bal; i_bal++) {
+            if (i_bal % 2 == 0) {
+                document.write("<span style='color:green; font-size:30px;'>" + i_bal + "</span><br>");
+            }
+        }
+    } else {
+        for (let i_bal = liczba1_bal; i_bal >= liczba2_bal; i_bal--) {
+            if (i_bal % 2 != 0) {
+                document.write("<span style='color:blue; font-size:10px;'>" + i_bal + "</span><br>");
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<!-- Balcerzak Z58_JS -->
