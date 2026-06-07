@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>z51 Balcerzak</title>
+</head>
+<body>
+
+<div style="color:blue; font-size:5mm;">
+<script>
+    let ile_bal = prompt("Ile razy powtórzyć?");
+    ile_bal = parseInt(ile_bal);
+
+    let tekst_bal = prompt("Podaj tekst, np. swoje inicjały:");
+
+    for (let i_bal = 1; i_bal <= ile_bal; i_bal++) {
+        for (let j_bal = 1; j_bal <= i_bal; j_bal++) {
+            document.write("&nbsp;");
+        }
+
+        document.write(i_bal + "_" + tekst_bal + "_" + i_bal + "<br>");
+    }
+</script>
+</div>
+
+</body>
+</html>
+
+<!-- Balcerzak Z51_JS -->
